@@ -5,13 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-  },
-  getters: {
+    sum: 0,
+    lastTeam: '',
   },
   mutations: {
-  },
-  actions: {
-  },
-  modules: {
+    addSum(state,payload) {
+      state.sum++;
+      state.lastTeam=payload;
+      
+    }
   }
 })
